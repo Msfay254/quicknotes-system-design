@@ -1,0 +1,49 @@
+:root {
+  --ink: #1d2733;
+  --muted: #5b6776;
+  --paper: #f4f6f8;
+  --card: #ffffff;
+  --line: #d5dbe3;
+  --accent: #0f766e;
+  --accent-dark: #0b5a54;
+  --ok-bg: #e3f5ec;   --ok-ink: #14532d;
+  --err-bg: #fdeaea;  --err-ink: #7f1d1d;
+  --load-bg: #e6eefb; --load-ink: #1e3a8a;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 2rem 1rem;
+  background: var(--paper); color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+}
+main { max-width: 42rem; margin: 0 auto; }
+h1 { margin: 0 0 .25rem; font-size: 2rem; }
+.intro { margin: 0 0 1.5rem; color: var(--muted); }
+
+button {
+  font: inherit; padding: .5rem 1rem; border: 0; border-radius: 6px;
+  background: var(--accent); color: #fff; cursor: pointer;
+}
+button:hover:not(:disabled) { background: var(--accent-dark); }
+button:disabled { opacity: .5; cursor: not-allowed; }
+:focus-visible { outline: 3px solid #f59e0b; outline-offset: 2px; }
+
+#status { min-height: 2.75rem; margin: 1rem 0; padding: .6rem .9rem; border-radius: 6px; }
+#status:empty { padding: 0; }
+#status.loading { background: var(--load-bg); color: var(--load-ink); }
+#status.success { background: var(--ok-bg);   color: var(--ok-ink);   border-left: 4px solid #16a34a; }
+#status.error   { background: var(--err-bg);  color: var(--err-ink);  border-left: 4px solid #dc2626; }
+
+form { display: grid; gap: .4rem; margin-bottom: 1.5rem; padding: 1rem; background: var(--card); border: 1px solid var(--line); border-radius: 8px; }
+label { font-weight: 600; }
+input, textarea { font: inherit; padding: .5rem; border: 1px solid var(--line); border-radius: 6px; width: 100%; }
+form button { justify-self: start; margin-top: .5rem; }
+
+ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .75rem; }
+li { padding: 1rem; background: var(--card); border: 1px solid var(--line); border-radius: 8px; }
+li h3 { margin: 0 0 .25rem; font-size: 1.05rem; }
+li p { margin: 0 0 .75rem; color: var(--muted); white-space: pre-wrap; }
+li.empty { color: var(--muted); text-align: center; border-style: dashed; }
+li button { background: #b91c1c; padding: .3rem .75rem; font-size: .9rem; }
+li button:hover:not(:disabled) { background: #991b1b; }
