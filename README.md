@@ -9,7 +9,7 @@ QuickNotes is a notes app that is moving from a browser-only tool to an online s
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/quicknotes-system-design.git
+   git clone https://github.com/msfay254/quicknotes-system-design.git
    cd quicknotes-system-design
    ```
 2. Open `index.html` in your browser (double-click it), or run a local server:
